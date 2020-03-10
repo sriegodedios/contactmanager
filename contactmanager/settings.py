@@ -128,7 +128,10 @@ STATIC_URL = '/static/'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'register/templates'),
+        'DIRS': [
+                os.path.join(BASE_DIR, 'register/templates'),
+                os.path.join(BASE_DIR, 'contactmanager/templates'),
+
                  ],
         'APP_DIRS': True,
         'OPTIONS': {
