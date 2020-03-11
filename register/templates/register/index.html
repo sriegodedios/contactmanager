@@ -12,14 +12,28 @@
 </head>
 <body>
 <div class="grid-container">
+    {% if form.errors %}
+        <div class="callout alert">
 
-
+             <h5>This is a large callout</h5>
+             <ul>
+            {% for error in form.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
 
     <form action="/register/" method="post">
         {% csrf_token %}
       <div class="grid-container">
+
+
+
+
+
           <div class="card">
-              <!--div class="card-section">
+              <div class="card-section">
                   <div class="row">
             <div class="grid-x grid-padding-x">
                     <div class="medium-6 cell">
@@ -38,7 +52,7 @@
             <div class="grid-x grid-padding-x">
                     <div class="medium-12 cell">
                         <label>Email
-                          <input type="text" name="Email" placeholder="<youremail>@domain.com">
+                          <input type="email" name="Email" placeholder="<youremail>@domain.com">
                         </label>
                       </div>
                 </div>
@@ -47,7 +61,7 @@
             <div class="grid-x grid-padding-x">
                     <div class="medium-12 cell">
                         <label>Phone
-                          <input type="text" name="PhoneNumber" placeholder="(###)-###-####">
+                          <input type="tel" name="PhoneNumber" placeholder="(###)-###-####">
                         </label>
                       </div>
                 </div>
@@ -60,9 +74,9 @@
 
               </div>
           </div>
-              </div-->
+              </div>
           </div>
-          <div class="card-section">
+          <!--div class="card-section">
               {{ form.as_p }}
           </div>
           <div class="row">
@@ -71,9 +85,7 @@
                         <button type="submit" class="primary button">Save</button>
                   </div>
 
-              </div>
-          </div>
-
+              </div-->
       </div>
     </form>
     </div>
