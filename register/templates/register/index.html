@@ -14,11 +14,12 @@
 <div class="grid-container">
 
 
+
     <form action="/register/" method="post">
         {% csrf_token %}
       <div class="grid-container">
           <div class="card">
-              <div class="card-section">
+              <!--div class="card-section">
                   <div class="row">
             <div class="grid-x grid-padding-x">
                     <div class="medium-6 cell">
@@ -59,8 +60,20 @@
 
               </div>
           </div>
+              </div-->
+          </div>
+          <div class="card-section">
+              {{ form.as_p }}
+          </div>
+          <div class="row">
+              <div class="grid-x grid-padding-x">
+                  <div class="medium-12 cell">
+                        <button type="submit" class="primary button">Save</button>
+                  </div>
+
               </div>
           </div>
+
       </div>
     </form>
     </div>

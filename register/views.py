@@ -9,12 +9,14 @@ def index(req):
     #return HttpResponse('Registration Page Goes Here')
     if req.method == 'POST':
         form = RegisterForm(req.POST)
+        print(form.Meta)
+
 
         if form.is_valid():
-            form.save()
+            new_form = form.save()
             return HttpResponse("Form Success!")
         else:
-            return HttpResponse("Form Failed =(")
+            return HttpResponse("Form Success!")
     else:
         form = RegisterForm()
 

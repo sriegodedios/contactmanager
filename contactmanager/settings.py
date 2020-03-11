@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'phone_field',
     'contact',
     'login',
     'register',
@@ -72,7 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'contactmanager.wsgi.application'
 
-
+PHONENUMBER_DEFAULT_REGION = "US"
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 

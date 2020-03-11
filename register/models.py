@@ -1,5 +1,5 @@
 from django.db import models
-from phone_field import PhoneField
+from phonenumber_field.modelfields import PhoneNumberField
 from django import forms
 from uuid import uuid4
 
@@ -10,6 +10,6 @@ class RegisteredUser(models.Model):
     FirstName = models.CharField(max_length=30)
     LastName = models.CharField(max_length=50)
     Email = models.EmailField(max_length=100, default="<address>@domain.com")
-    PhoneNumber = PhoneField(blank=True, help_text='Phone Number', null=True, unique=True)
+    PhoneNumber = PhoneNumberField()
 
 
